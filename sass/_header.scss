@@ -1,0 +1,70 @@
+/*
+*** HEADER
+*/
+
+header {
+	background: $light-grey;
+	height: 50px;
+	nav ul {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		float: right;
+		li {
+			float: left;
+			a {
+				&:link,
+				&:active,
+				&:visited {
+					line-height: 50px;
+					padding: 0 20px;
+					display: inline-block;
+					color: white;
+					text-decoration: none;
+					text-transform: uppercase;
+					font-size: 12px;
+				}
+			}
+		}
+	}
+	nav img {
+		padding: 10px 0 10px 10px;
+	}
+}
+
+nav::before,
+nav::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+@media (max-width: 767px){
+
+	header {
+		height: auto;
+		>nav {
+			text-align: center;
+			a {
+				display: block;
+			}
+			ul {
+				float: none;
+				display: block;
+				li {
+					float: none;
+					display: block;
+					border-top: 1px solid #595959;
+					a {
+						&:link,
+						&:active,
+						&:visited {
+							float: none;
+							display: block;
+						}
+					}
+				}
+			}
+		}
+	}
+}

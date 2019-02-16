@@ -1,0 +1,319 @@
+@import 'grid';
+
+$fonts: "Open sans", sans-serif;
+$main_font_color: #666;
+$cyan: #00c7e8;
+$light_grey: #313332;
+
+/*
+*** COMMON
+*/
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	min-width: 700px;
+	margin: 0;
+	padding: 0;
+	font-family: $fonts;
+	font-weight: 400;
+	color: $main_font_color;
+}
+
+.container {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.bold {
+	font-weight: 700;
+}
+
+.italic {
+	font-style: italic;
+}
+
+.cyan,
+header>nav ul>li>a:hover {
+	color: $cyan !important;
+}
+
+@import 'header';
+
+/*
+*** HERO
+*/
+
+.hero {
+	height: 300px;
+	background-image: url('https://images.unsplash.com/photo-1532274402911-5a369e4c4bb5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80');
+	background-size: cover;
+	background-position: 0% 45%;
+	.slogan {
+		max-width: 800px;
+		float: right;
+		background: rgba(0,0,0,.5);
+		margin-top: 60px;
+		padding: 10px 30% 10px 40px;
+		h1 {
+			color: white;
+			text-transform: uppercase;
+			font-weight: 400;
+		}
+	}
+}
+
+/*
+*** BENEFITS
+*/
+
+.benefits {
+	margin: 50px 0;
+	.icon {
+		font-size: 12px;
+		color: $light-grey;
+	}
+	h4 {
+		text-transform: uppercase;
+		color: $light-grey;
+	}
+	p {
+		font-size: 12px;
+	}
+}
+
+/*
+*** FEATURED
+*/
+
+.featured {
+	margin-bottom: 50px;
+	.container {
+		padding: 0 70px;
+	}
+	h1 {
+		font-size: 700;
+		text-transform: uppercase;
+		color: $light-grey;
+	}
+	p {
+		font-size: 14px;
+	}
+}
+
+/*
+*** GALLERY
+*/
+
+.gallery {
+	img {
+		min-width: 100%;
+		max-height: 200px;
+		display: block;
+		object-fit: cover;
+	}
+	[class*="col-"] {
+		padding: 0;
+		margin: 0;
+	}
+	.item {
+		position: relative;
+		overflow: hidden;
+		&:hover {
+			.buttons {
+				opacity: 1;
+				top: 0;
+			}
+		}
+	}
+	.buttons {
+		position: absolute;
+		top: -100%;
+		width: 100%;
+		height: 100%;
+		padding-top: 36%;
+		background-color: rgba(0,0,0,.5);
+		opacity: 1;
+		font-size: 8px;
+		transition: all .3s;
+		a {
+			&:link,
+			&:active,
+			&:visited {
+				color: white;
+				display: inline-block;
+				transition: all .1s ease-in-out;
+			}
+			&:hover {
+				transform: scale(1.2);
+			}
+			&:first-of-type {
+				margin-right: 20px;
+			}
+			.fa-inverse {
+				color: black;
+			}
+		}
+	}
+}
+
+@media (max-width: 767px){
+
+	.gallery {
+		.buttons {
+			top: 0;
+			width: 100%;
+			height: 50%;
+			padding-top: 30px;
+			a {
+				&:link,
+				&:active,
+				&:visited,
+				&:hover {
+					transform: scale(2);
+				}
+				&:first-of-type {
+					margin-right: 60%;
+				}
+			}
+		}
+	}
+}
+
+/*
+*** EMPLOYEES
+*/
+
+.employees {
+	margin: 80px 0;
+	.photo {
+		position: relative;
+		margin: 0 5px;
+		img {
+			width: 100%;
+			border-radius: 50%;
+			display: block;
+		}
+		.title {
+			position: absolute;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			padding-top: 45%;
+			border-radius: 50%;
+			background-color: rgba(0,0,0,.5);
+			color: white;
+			opacity: 0;
+			transition: all .3s;
+		}
+		&:hover {
+			.title {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+/*
+*** TABLET
+*/
+
+.tablet {
+	color: white;
+	[class*="col-"] {
+		padding-bottom: 0;
+	}
+	img {
+		width: 100%;
+		margin-top: 50px;
+		display: block;
+	}
+	.shadow {
+		background-color: rgba(0,0,0,.5);
+	}
+	h1 {
+		text-transform: uppercase;
+		margin-top: 70px;
+		margin-bottom: 0;
+	}
+	p {
+		font-size: 14px;
+	}
+	.container {
+		>.row {
+			>div {
+				&:nth-of-type(2) {
+					padding-left: 40px;
+				}
+			}
+		}
+		.row {
+			.row {
+				div {
+					padding-top: 0;
+					&:first-of-type {
+						padding-left: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 767px){
+
+	.tablet {
+		.row {
+			&:first-child {
+				position: relative;
+				&>div {
+					&:first-of-type {
+						position: absolute;
+						bottom: 0;
+					}
+					&:nth-child(2) {
+						margin-left: 25%;
+					}
+				}
+			}
+			.row {
+				div {
+					&:nth-child(2) {
+						padding-left: 0;
+					}
+				}
+			}
+		}
+		h1 {
+			margin-top: 1em;
+		}
+	}
+}
+
+/*
+*** STATISTICS
+*/
+
+.statistics {
+	margin-top: 50px;
+	margin-bottom: 30px;
+	.number {
+		font-size: 48px;
+		font-weight: 700;
+		color: $light-grey;
+	}
+	.title {
+		text-transform: uppercase;
+		font-size: 11px;
+		font-weight: 700;
+	}
+}
+
+@import 'footer';

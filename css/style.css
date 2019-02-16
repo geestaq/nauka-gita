@@ -1,36 +1,4 @@
 /*
-*** COMMON
-*/
-* {
-  box-sizing: border-box; }
-
-body {
-  min-width: 700px;
-  margin: 0;
-  padding: 0;
-  font-family: "Open sans", sans-serif;
-  font-weight: 400;
-  color: #666; }
-
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto; }
-
-.text-center {
-  text-align: center; }
-
-.bold {
-  font-weight: 700; }
-
-.italic {
-  font-style: italic; }
-
-.cyan,
-header > nav ul > li > a:hover {
-  color: #00c7e8 !important; }
-
-/*
 *** GRID
 */
 .row::before,
@@ -151,6 +119,38 @@ header > nav ul > li > a:hover {
 
 .col-offset-11 {
   margin-left: 91.66%; }
+
+/*
+*** COMMON
+*/
+* {
+  box-sizing: border-box; }
+
+body {
+  min-width: 700px;
+  margin: 0;
+  padding: 0;
+  font-family: "Open sans", sans-serif;
+  font-weight: 400;
+  color: #666; }
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; }
+
+.text-center {
+  text-align: center; }
+
+.bold {
+  font-weight: 700; }
+
+.italic {
+  font-style: italic; }
+
+.cyan,
+header > nav ul > li > a:hover {
+  color: #00c7e8 !important; }
 
 /*
 *** HEADER
